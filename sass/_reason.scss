@@ -1,0 +1,178 @@
+@use "mixin" as *;
+
+//------------- reason ----------------
+
+.reason {
+	background: #f5f5f5;
+}
+
+.reason-container {
+	display: flex;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 204px 0px 100px 0px;
+	flex-direction: column;
+	align-items: center;
+	gap: 70px;
+	@include mq(sp) {
+		padding-top: 250px;
+	}
+}
+
+.reason-contents {
+	// コンテンツ3つを縦並び
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 72px;
+
+	@include mq(sp) {
+		gap: 50px;
+	}
+}
+
+.reason-content {
+	// ひとつのコンテンツ
+	display: flex;
+	height: 400px;
+	align-items: center;
+
+	@include mq(sp) {
+		display: flex;
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+	}
+}
+
+.reason-content-reverse {
+	flex-direction: row-reverse;
+}
+
+.reason-contents-item {
+	// コンテンツの文章のグループの大枠
+	display: flex;
+	width: 1000px;
+	padding-right: 160px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 10px;
+	background: #fdfdfd;
+
+	@include mq(sp) {
+		width: 100%;
+		padding-right: 0;
+		align-items: center;
+		background: #f5f5f5;
+	}
+}
+
+.reason-contents-item-reverse {
+	padding-right: 0;
+	padding-left: 160px;
+	align-items: flex-start;
+
+	@include mq(sp) {
+		padding: 0;
+	}
+}
+
+.reason-content-inner {
+	// コンテンツの文章のグループ
+	display: flex;
+	width: 560px;
+	padding: 63px 50px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
+
+	@include mq(sp) {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.reason-contentImg {
+	// コンテンツの画像の親要素
+	position: relative;
+	width: 457px;
+	height: 329px;
+
+	@include mq(sp) {
+		position: relative;
+		width: 100%;
+		height: 216px;
+		align-self: stretch;
+	}
+
+	img {
+		// コンテンツの画像
+		position: absolute;
+		top: 50%;
+		left: 211px;
+		transform: translateY(-50%);
+		width: 100%;
+		height: auto;
+
+		@include mq(sp) {
+			position: static;
+			top: 0;
+			left: 0;
+			transform: none;
+			height: 216px;
+			object-fit: cover;
+		}
+	}
+}
+
+.reason-contentImg-reverse {
+	position: relative;
+
+	img {
+		position: relative;
+		left: -203px;
+	}
+}
+
+.reason-num {
+	color: #599cc2;
+
+	/* PC/roboto18px */
+	font-family: Roboto;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; /* 27px */
+}
+
+.reason-contentTtl {
+	color: #202020;
+
+	/* PC/本文強調24px */
+	font-family: "Noto Sans JP";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; /* 36px */
+}
+
+.bar-blue {
+	height: 3px;
+	align-self: stretch;
+	background: #599cc2;
+}
+
+.reason-lead {
+	color: #202020;
+
+	/* PC/本文16px */
+	font-family: "Noto Sans JP";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+}

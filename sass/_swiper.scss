@@ -1,0 +1,14 @@
+@use "mixin" as *;
+
+.swiper {
+	width: 100%;
+}
+.swiper-wrapper {
+	width: 900px;
+}
+.swiper-slide {
+	width: 300px;
+	margin-bottom: 70px;
+	display: flex;
+	gap: 33px;
+}
