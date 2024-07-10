@@ -1,0 +1,31 @@
+@use "mixin";
+
+.head-common {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  margin-bottom: 70px;
+}
+
+.ttl-common {
+	color: #202020;
+
+	/* PC/h2タイトル */
+	font-family: Roboto;
+	font-size: 62px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%; /* 62px */
+}
+
+.subttl-common {
+	color: #202020;
+
+	/* PC/h2タイトルテキスト */
+	font-family: "Noto Sans JP";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 27px */
+}
+
