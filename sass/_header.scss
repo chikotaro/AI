@@ -1,0 +1,166 @@
+@use "mixin" as *;
+
+.header-ly {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.header-container {
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-logo {
+	width: 200px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.header-nav {
+	display: flex;
+	@include mq(sp) {
+		display: none;
+	}
+}
+
+.header-nav-list {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-nav-item {
+	font-size: 14px;
+	color: #202020;
+	font-weight: 700;
+	padding: 15px;
+}
+
+.header-nav-item:last-of-type {
+	padding: 0;
+}
+
+.nav-link:hover {
+	color: #599cc2;
+}
+
+.header-nav-login:hover {
+	width: fit-content;
+	height: 10px;
+	color: #202020;
+	text-decoration: underline;
+	text-decoration-color: #599cc2;
+	text-underline-offset: 10px;
+	text-decoration-thickness: 3px;
+}
+
+.header-nav-item:nth-last-child(2) {
+	position: relative; /* 要素を相対的に配置 */
+}
+
+.header-nav-item:nth-last-child(2)::before {
+	content: ""; /* 擬似要素の内容を空にする */
+	position: absolute; /* 絶対位置指定 */
+	top: 50%; /* 要素の上端を基準に中央揃え */
+	left: -5px; /* 左から10pxの位置に配置 */
+	width: 1px; /* 縦線の幅 */
+	height: 32px; /* 縦線の長さ */
+	background-color: #599cc2; /* 縦線の色 */
+	transform: translateY(-50%); /* 縦線を縦方向に中央揃え */
+}
+
+.header-nav-register {
+	color: #fdfdfd;
+	font-family: "Noto Sans JP";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	display: flex;
+	width: 200px;
+	padding: 16px 0px;
+	justify-content: center;
+	align-items: flex-start;
+	border-radius: 50px;
+	background: #599cc2;
+}
+
+.header-nav-register:hover {
+	color: #599cc2;
+	font-size: 14px;
+	background: #fdfdfd;
+	border: 1px solid #599cc2;
+}
+
+//------------ header-nav-------------
+// ----------sp nav-------------------
+
+.hb-nav {
+	width: 44px;
+	height: 44px;
+	position: relative;
+	cursor: pointer;
+
+	@include mq(pc) {
+		display: none;
+	}
+}
+
+.menu-bar {
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	flex-shrink: 0;
+	background: #202020;
+}
+
+.menu-bar:nth-of-type(1) {
+	top: 18px;
+	left: 6px;
+}
+.menu-bar:nth-of-type(2) {
+	top: 28px;
+	left: 6px;
+}
+
+.menu-bar:active:nth-last-of-type(1) {
+	transform: translateY(10px) rotate(45deg);
+}
+
+.menu-bar:active:nth-last-of-type(2) {
+	transform: translateY(-10px) rotate(-45deg);
+}
+
+// ------------sp nav---------------------
+// ------------drawer---------------------
+
+.drawer-content {
+	max-width: 400px;
+	margin: 0 auto;
+	padding-bottom: 159px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	display: none;
+}
+
+.drawer-menu {
+	display: flex;
+	width: 300px;
+	padding: 50px 0px;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.drawer-link {
+	display: flex;
+	padding: 10px 0px;
+	justify-content: center;
+	align-items: center;
+}
