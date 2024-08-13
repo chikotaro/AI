@@ -1,3 +1,5 @@
 {
-	"root": "SAMPLES"
+	"cleanUrls": true,
+	"trailingSlash": false,
+	"outputDirectory": "AI"
 }
