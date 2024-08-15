@@ -1,0 +1,13 @@
+{
+	"liveServer.settings.port": 5501, // 使用するポート番号
+	"liveServer.settings.root": "/", // サーバーのルートディレクトリ
+	"liveServer.settings.ignoreFiles": [
+		"**/.vscode/**",
+		"**/*.scss",
+		"**/*.sass"
+	], // 無視するファイルパターン
+	"liveServer.settings.wait": 1000, // リロード前の遅延時間 (ミリ秒)
+	"liveServer.settings.fullReload": true, // フルリロードを強制するかどうか
+	"liveServer.settings.useBrowserPreview": false, // VS Codeのプレビュー機能を使うかどうか
+	"liveServer.settings.CustomBrowser": "chrome" // 使用するブラウザ (chrome, firefoxなど)
+}
