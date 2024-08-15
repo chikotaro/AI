@@ -22,7 +22,8 @@
 	padding: 50px 20px;
 
 	@include mq(pc) {
-		padding: 0;
+		padding-top: 100px;
+		padding-bottom: 100px;
 	}
 }
 

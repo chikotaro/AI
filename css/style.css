@@ -326,6 +326,11 @@
           align-items: center;
 }
 
+.ly-common-py {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .head-common {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,6 +344,11 @@
           align-items: center;
   margin-bottom: 70px;
 }
+@media (max-width: 1119px) {
+  .head-common {
+    margin-bottom: 0px;
+  }
+}
 
 .ttl-common {
   color: #202020;
@@ -349,6 +359,11 @@
   font-weight: 700;
   line-height: 100%; /* 62px */
 }
+@media (max-width: 1119px) {
+  .ttl-common {
+    font-size: 32px;
+  }
+}
 
 .subttl-common {
   color: #202020;
@@ -358,6 +373,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 27px */
+}
+@media (max-width: 1119px) {
+  .subttl-common {
+    /* SP/h2タイトルテキスト */
+    font-size: 16px;
+    line-height: 180%; /* 28.8px */
+  }
 }
 
 .reason {
@@ -383,6 +405,7 @@
 @media (max-width: 1119px) {
   .reason-container {
     padding-top: 250px;
+    gap: 30px;
   }
 }
 
@@ -597,8 +620,19 @@
   background: url("/images/pickup-bg.jpg") lightgray 50%/cover no-repeat;
 }
 
+@media (max-width: 1119px) {
+  .pickUp-head {
+    margin-bottom: 30px;
+  }
+}
+
 .pickUp-container {
   padding: 100px 237px;
+}
+@media (max-width: 1119px) {
+  .pickUp-container {
+    padding: 0;
+  }
 }
 
 .pickUp-cards {
@@ -624,6 +658,17 @@
   border-radius: 15px;
   background: #fff;
   padding-bottom: 30px;
+}
+
+.pickUp-card-img {
+  width: 100%;
+  overflow: hidden;
+}
+.pickUp-card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .pickUp-card-ttl {
@@ -672,6 +717,8 @@
   display: -ms-flexbox;
   display: flex;
   gap: 33px;
+  background: #fff;
+  color: #967878;
 }
 
 .ly-inner {
@@ -688,7 +735,8 @@
 }
 @media (min-width: 1120px) {
   .SP-inner {
-    padding: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 

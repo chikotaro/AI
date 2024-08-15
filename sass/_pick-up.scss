@@ -7,8 +7,18 @@
 	background: url("/images/pickup-bg.jpg") lightgray 50% / cover no-repeat;
 }
 
+.pickUp-head {
+	@include mq(sp) {
+		margin-bottom: 30px;
+	}
+}
+
 .pickUp-container {
 	padding: 100px 237px;
+
+	@include mq(sp) {
+		padding: 0;
+	}
 }
 
 .pickUp-cards {
@@ -27,6 +37,19 @@
 	border-radius: 15px;
 	background: #fff;
 	padding-bottom: 30px;
+}
+
+.pickUp-card-img {
+	// width: 305.357px;
+	// height: 209.067px;
+	// flex-shrink: 0;
+	width: 100%;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 .pickUp-card-ttl {
